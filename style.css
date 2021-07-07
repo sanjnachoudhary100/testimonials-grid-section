@@ -1,0 +1,140 @@
+:root {
+	--semi-bold: 600;	
+}
+
+*
+{
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 13 px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+	max-width: 1440px;
+	margin: 0 auto;
+	position: relative;
+}
+.card__reviewer-pic {
+	border: 2px solid ;
+	border-radius: 50%;
+	margin-right: 1rem;
+	float: left;
+	width: 56px;
+	height: 56px;
+	transform: translate(0px, -5px);
+}
+.card-intro {
+	margin: 1rem 0;
+	font-size: 3 rem;
+    font-weight:600;
+}
+
+.card-review {
+	font-size: 1rem;
+	opacity: 55%;
+}
+.header h2 {
+	opacity: 50%;
+    margin-bottom: 10px;
+}
+
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-auto-flow: dense;
+}
+
+.card {
+	padding: 2rem;
+	border-radius: 10px;
+	
+	box-shadow: 10px 14px 30px -20px rgba(0, 0, 0, 0.78);
+	transition: box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+	/* transform: scale(1.01); */
+	box-shadow: none;
+}
+
+.one
+{
+    grid-column: auto/span 2;
+    background-color: hsl(263, 55%, 52%);
+    padding: 20px;
+    background-image: url(images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: 85% 0;
+	background-size: 8rem;
+    color: hsl(0, 0%, 100%);
+    
+}
+
+.two
+{
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color:hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+.three
+{
+    grid-column: 1/2;
+    background-color: var(--white);
+	background-color:hsl(0, 0%, 100%) ;
+
+}
+.four
+{
+   grid-column: 2/4;
+   background-color:hsl(219, 29%, 14%);
+   color: hsl(0, 0%, 100%);
+}
+.five
+{
+
+grid-row: auto/span 2;
+background-color:hsl(0, 0%, 100%)
+}
+
+
+@media (max-width: 767px) {
+	.grid {
+		padding: 1rem;
+		grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+	}
+	/* .card--wide {
+		grid-column: auto;
+	}
+	.card--long {
+		grid-row: auto;
+	} */
+}
+
+@media (max-width: 950px) {
+	.grid {
+		display:block;
+        
+	}
+	.one{
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	.two{
+		margin-bottom: 20px;
+	}
+	.three{
+		margin-bottom: 20px;
+	}
+	.four{
+		margin-bottom: 20px;
+	}
+
+	
+}
